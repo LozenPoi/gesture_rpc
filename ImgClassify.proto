@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package gesture_rpc;
+
+service ClassifyService {
+    // BiDi Streaming
+    rpc ClassifyImages(stream imgs) returns (stream classified) {};
+}
+
+message imgs{
+    message img {
+        repeated int32 single_img = 1;
+    }
+    int32 num_img = 1;
+    repeated img all_img = 2;
+}
+
+message classified{
+    int32 num_img = 1;
+    repeated string classes = 2;
+}
