@@ -11,8 +11,9 @@ message imgs{
     message img {
         repeated int32 single_img = 1;
     }
-    int32 num_img = 1;
-    repeated img all_img = 2;
+    string ID = 1;
+    int32 num_img = 2;
+    repeated img all_img = 3;
 }
 
 message classified{

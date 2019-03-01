@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='gesture_rpc',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n\x11ImgClassify.proto\x12\x0bgesture_rpc\"Z\n\x04imgs\x12\x0f\n\x07num_img\x18\x01 \x01(\x05\x12&\n\x07\x61ll_img\x18\x02 \x03(\x0b\x32\x15.gesture_rpc.imgs.img\x1a\x19\n\x03img\x12\x12\n\nsingle_img\x18\x01 \x03(\x05\".\n\nclassified\x12\x0f\n\x07num_img\x18\x01 \x01(\x05\x12\x0f\n\x07\x63lasses\x18\x02 \x03(\t2U\n\x0f\x43lassifyService\x12\x42\n\x0e\x43lassifyImages\x12\x11.gesture_rpc.imgs\x1a\x17.gesture_rpc.classified\"\x00(\x01\x30\x01\x62\x06proto3')
+  serialized_pb=_b('\n\x11ImgClassify.proto\x12\x0bgesture_rpc\"f\n\x04imgs\x12\n\n\x02ID\x18\x01 \x01(\t\x12\x0f\n\x07num_img\x18\x02 \x01(\x05\x12&\n\x07\x61ll_img\x18\x03 \x03(\x0b\x32\x15.gesture_rpc.imgs.img\x1a\x19\n\x03img\x12\x12\n\nsingle_img\x18\x01 \x03(\x05\".\n\nclassified\x12\x0f\n\x07num_img\x18\x01 \x01(\x05\x12\x0f\n\x07\x63lasses\x18\x02 \x03(\t2U\n\x0f\x43lassifyService\x12\x42\n\x0e\x43lassifyImages\x12\x11.gesture_rpc.imgs\x1a\x17.gesture_rpc.classified\"\x00(\x01\x30\x01\x62\x06proto3')
 )
 
 
@@ -51,8 +51,8 @@ _IMGS_IMG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=99,
-  serialized_end=124,
+  serialized_start=111,
+  serialized_end=136,
 )
 
 _IMGS = _descriptor.Descriptor(
@@ -63,15 +63,22 @@ _IMGS = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='num_img', full_name='gesture_rpc.imgs.num_img', index=0,
-      number=1, type=5, cpp_type=1, label=1,
+      name='ID', full_name='gesture_rpc.imgs.ID', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='num_img', full_name='gesture_rpc.imgs.num_img', index=1,
+      number=2, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='all_img', full_name='gesture_rpc.imgs.all_img', index=1,
-      number=2, type=11, cpp_type=10, label=3,
+      name='all_img', full_name='gesture_rpc.imgs.all_img', index=2,
+      number=3, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -89,7 +96,7 @@ _IMGS = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=34,
-  serialized_end=124,
+  serialized_end=136,
 )
 
 
@@ -126,8 +133,8 @@ _CLASSIFIED = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=126,
-  serialized_end=172,
+  serialized_start=138,
+  serialized_end=184,
 )
 
 _IMGS_IMG.containing_type = _IMGS
@@ -166,8 +173,8 @@ _CLASSIFYSERVICE = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=174,
-  serialized_end=259,
+  serialized_start=186,
+  serialized_end=271,
   methods=[
   _descriptor.MethodDescriptor(
     name='ClassifyImages',
